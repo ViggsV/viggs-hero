@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import MenuButton from '../components/Menubutton.js';
 import Title from '../components/Title.js';
 import { AnimatedNoise } from "../cuicui/animated-noise";
-import GlowText from "../cuicui/glow-text";
+
 
 // Content sections
 function AboutSection() {
@@ -68,14 +68,14 @@ export default function HalfLifePortfolio() {
    
     <div className=" relative h-full w-full overflow-hidden flex flex-col items-center min-h-screen bg-gradient-to-br from-gray-900 to-black p-8 font-mono">
       <div className="w-full ">
-        <GlowText>
+
         <Title />
-        </GlowText>
+     
          <AnimatedNoise opacity={0.1} />
 
   
         {showMenu ? (
-          <div className="flex flex-col items-center mt-6">
+          <div className="flex flex-col items-left mt-6 ">
             <MenuButton text="ABOUT" onClick={() => handleMenuClick('about')} />
             <MenuButton text="PROJECTS" onClick={() => handleMenuClick('projects')} />
             <MenuButton text="CONTACT" onClick={() => handleMenuClick('contact')} />
@@ -93,9 +93,7 @@ export default function HalfLifePortfolio() {
           </div>
         )}
         
-        <div className="mt-12 text-gray-500 text-sm text-center">
-          © 2025 viggs.dev | Inspired by Half-Life
-        </div>
+
       </div>
     </div>
   );
