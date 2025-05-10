@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FAF9F6   ;
-  --foreground: #0051f3  ;
+  --background-from: #f9fafb;
+  --background-to: #ffffff;
+  --foreground: #0a0a0a;
 }
 
 @theme inline {
@@ -12,15 +13,17 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/*@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --background-from: #111827; /* gray-900 */
+  --background-to: #000000;
+  --foreground: #ededed;
   }
 }
-*/
+
 body {
-  background: var(--background);
+min-height: 100vh;
+  background: linear-gradient(to bottom right, var(--background-from), var(--background-to));
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }

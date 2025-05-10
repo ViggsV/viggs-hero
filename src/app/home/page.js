@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import MenuButton from '../components/Menubutton.js';
 import Title from '../components/Title.js';
-import { AnimatedNoise } from "../cuicui/animated-noise";
+import { AnimatedNoise } from "../effects/animated-noise";
 
 
 // Content sections

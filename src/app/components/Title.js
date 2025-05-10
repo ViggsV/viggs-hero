@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import ShinyText from "../cuicui/shiny-text";
-import MovingText from "../cuicui/moving-text";
+import ShinyText from "../effects/shiny-text";
+import MovingText from "../effects/moving-text";
 
 export default function Title() {
   const [loaded, setLoaded] = useState(false);
