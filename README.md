@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Viggs' Portfolio Website
 
-## Getting Started
+---
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Interactive and responsive portfolio site built with React and Tailwind CSS
+- Audio feedback using Howler.js
+- Hobbies and interests section
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **React** – Component-based structure and state management
+- **Tailwind CSS** – Utility-first CSS framework for rapid UI development
+- **Howler.js** – JavaScript audio library for adding ambient or interactive sounds
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## How it Works
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The site is built as a single-page application using React components. Each section (About, Projects, Hobbies, Contact) is a component styled using Tailwind utility classes. Audio effects are triggered on interactions via Howler.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The goal is to create a smooth, immersive experience that reflects my style and personality while clearly presenting my work and interests.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Links
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Live Site:** TO ADD
+- **Repository:** TO ADD
+---
+
+## Credits & Thank you
+
+- UI inspiration from CuiCui
+- Sound design elements powered by [Howler.js](https://howlerjs.com)
+- Fonts [Google Fonts](https://fonts.google.com) 
+
+---
+
+## TO DO 
+
+- Add dark/light mode toggle
+- Animate page transitions with Framer Motion
+- Implement multilingual support
+- Add blog section for coding thoughts & devlogs
+- Performance optimizations (image lazy loading, bundle splitting)
+- Splash screen with "using sfx" notification to continue
+- Mute button
+- Add projects, hobbies, etc data
+
+---
+
+## Developer Notes
+
+This project is both a portfolio and a playground — a place to test design, experiment with interactivity, and share who I am through code. It will keep evolving as I grow as a developer.
+
+Feel free to fork, remix, or reach out if you’d like to collaborate or provide feedback.
