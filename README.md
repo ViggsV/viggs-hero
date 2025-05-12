@@ -28,7 +28,7 @@ The goal is to create a smooth, immersive experience that reflects my style and 
 
 ## Links
 
-- **Live Site:** viggs.dev
+- **Live Site:** [viggs.dev](https://www.viggs.dev/)
 - **Repository:** https://github.com/ViggsV/viggs-hero.git
 ---
 
