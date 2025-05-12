@@ -28,8 +28,8 @@ The goal is to create a smooth, immersive experience that reflects my style and 
 
 ## Links
 
-- **Live Site:** TO ADD
-- **Repository:** TO ADD
+- **Live Site:** https://viggs-hero.vercel.app/
+- **Repository:** https://github.com/ViggsV/viggs-hero.git
 ---
 
 ## Credits & Thank you
