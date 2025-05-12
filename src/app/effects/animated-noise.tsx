@@ -2,7 +2,7 @@ import type { ComponentProps } from "react";
 
 export function AnimatedNoise({
   opacity,
-  className = "",
+  className = "z-[-2]",
   backgroundSize = "400px",
   ...props
 }: { opacity: number; backgroundSize?: string } & ComponentProps<"div">) {
