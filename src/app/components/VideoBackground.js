@@ -7,7 +7,7 @@ import React from 'react';
 const VideoBackground = ({ 
   src, 
   type = 'video/webm',
-  className = 'mix-blend-screen absolute inset-0 w-full h-full object-cover z-[-1] '
+  className = 'blur-xs md:blur-none mix-blend-screen absolute inset-0 w-full h-full object-cover z-[-1] '
 }) => {
   return (
     <video
