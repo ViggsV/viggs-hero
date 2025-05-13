@@ -1,11 +1,16 @@
 import { motion } from "motion/react";
 import VideoBackground from "./VideoBackground";
+import LoopingText from "../effects/LoopingText";
 
 export default function AboutSection() {
   return (
     <div>
       <div>
-        <VideoBackground src="https://cdn.jsdelivr.net/gh/ViggsV/files@main/full%20flow.webm" />
+        <VideoBackground
+          src="https://cdn.jsdelivr.net/gh/ViggsV/files@main/full%20flow.webm"
+          loopStart={27.5}
+          loopEnd={30.5}
+        />
       </div>
 
       <div className="z-10 md:hidden">
@@ -32,19 +37,30 @@ export default function AboutSection() {
       {/* ——— Desktop: One text overlay per scene ——— */}
       <div className="hidden md:block select-none inset-0 z-10 text-white">
         {/* Scene 1: MY NAME */}
-
-        <div className="absolute top-[10%] left-1/2 -translate-x-1/2 max-w-md text-center ">
-        
-          <p className="text-2xl">My name is Viggs.</p>
-        </div>
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: [0, 1, 0] }}
+          transition={{ duration: 6, delay: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <div className="absolute top-[10%] left-1/2 -translate-x-1/2 max-w-md text-center ">
+            <p className="text-red-500 text-2xl">My name is Viggs.</p>
+          </div>
+        </motion.div>
 
         {/* Scene 2: I WANT YOU SUCCEED */}
-        <div className="absolute bottom-[10%] left-1/2  -translate-x-1/2  text-center max-w-sm">
-          <p className="text-3xl font-semibold">
-            I want <span className="text-orange-400">YOU</span> to succeed.
-          </p>
-        </div>
-
+        <motion.div
+          initial={{ y: 0, opacity: 0 }}
+          animate={{ y: 0, opacity: [0, 1, 1, 0] }}
+          transition={{ duration: 4, delay: 9 }}
+          exit={{ opacity: 0 }}
+        >
+          <div className="text-black absolute bottom-[10%] left-1/2  -translate-x-1/2  text-center max-w-sm">
+            <p className="text-3xl font-semibold">
+              I want <span className="text-orange-400">YOU</span> to succeed.
+            </p>
+          </div>
+        </motion.div>
         {/* Scene 3: Babushka  */}
         <div className="absolute top-[60%] right-[10%] max-w-sm text-right">
           <p className="text-xl italic">I am willing to help.</p>
