@@ -1,0 +1,81 @@
+<AnimatePresence mode="wait">
+  {isTwoVisible && (
+    <p className="text-orange-400 text-3xl font-semibold absolute bottom-[10%] left-1/2 -translate-x-[1.8rem]">
+      <span className="relative inline-block w-[3ch] text-center">
+        {/* YOU */}
+        <motion.span
+          key="him"
+          className="absolute left-0 top-30 w-full"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: [0,1,0], y: 0 }}
+          exit={{ opacity: 0, y:0  }}
+          transition={{
+            duration: 0.4,
+            delay: 0,
+
+          }}
+        >
+          HIM
+        </motion.span>
+
+        {/* US */}
+        <motion.span
+          key="her"
+          className="absolute left-0 top-[-31] w-full"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: [0,1,0], y: 0 }}
+          exit={{ opacity: 0, y: 0 }}
+          transition={{
+            duration: 0.4,
+            delay: 0.2,
+
+          }}
+        >
+          HER
+        </motion.span>
+        <motion.span
+          key="me"
+          className="absolute left-0 top-[-32] w-full"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity:[0,1,0], y: 0 }}
+          exit={{ opacity: 0, y: 0 }}
+          transition={{
+            duration: 0.4,
+            delay: 0.4
+
+          }}
+        >
+          ME
+        </motion.span>
+        <motion.span
+          key="you"
+          className="absolute left-0 top-[-25] w-full"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 0 }}
+          transition={{
+            duration: 0.4,
+            delay: 0.6,
+
+          }}
+        >
+          YOU
+        </motion.span>
+        <motion.span
+          key="us"
+          className="absolute left-0 top-[-25] w-full"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 0 }}
+          transition={{
+            duration: 0.4,
+            delay: 0.8,
+
+          }}
+        >
+          US
+        </motion.span>
+      </span>
+    </p>
+  )}
+</AnimatePresence>
