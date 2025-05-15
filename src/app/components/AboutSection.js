@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "motion/react";
 import React, { useState, useEffect } from "react";
 import VideoBackground from "./VideoBackground";
 import { SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiAdobeaftereffects } from 'react-icons/si';
-import { TbBrandMotion } from 'react-icons/tb'; // Motion One icon (using Tabler Icons as no direct icon in Simple Icons)
+import RisingTextSequence from "./RisingTextSequence"
 
 
 import TypeEffect from "../effects/TypeEffect";
@@ -31,15 +31,15 @@ export default function AboutSection() {
   useEffect(() => {
     const showTwoTimeout = setTimeout(() => {
       setIsTwoVisible(true); // Show after 1s
-    }, 9400);
+    }, 9000);
 
-    const hideTwoTimeout = setTimeout(() => {
-      setIsTwoVisible(false); // Hide after 4s total
-    }, 10800);
+    // const hideTwoTimeout = setTimeout(() => {
+    //   setIsTwoVisible(false); // Hide after 4s total
+    // }, 11800);
 
     return () => {
       clearTimeout(showTwoTimeout);
-      clearTimeout(hideTwoTimeout);
+      // clearTimeout(hideTwoTimeout);
     };
   }, []);
   useEffect(() => {
@@ -166,78 +166,9 @@ export default function AboutSection() {
 </p>
 
 {/* "YOU" */}
-<AnimatePresence mode="wait">
-  {isTwoVisible && (
-    <p className="text-orange-400 text-3xl font-semibold absolute bottom-[10%] left-1/2 -translate-x-[1.8rem]">
-      <span className="relative inline-block w-[3ch] text-center">
-        {/* YOU */}
-        <motion.span
-          key="you"
-          className="absolute left-0 top-[-5] w-full"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 100 }}
-          transition={{
-            duration: 0.4,
-            delay: 0,
-            type: "spring",
-            stiffness: 100,
-          }}
-        >
-          YOU
-        </motion.span>
+<RisingTextSequence isVisible={isTwoVisible}></RisingTextSequence>
 
-        {/* US */}
-        <motion.span
-          key="us"
-          className="absolute left-0 top-[-5] w-full"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 100 }}
-          transition={{
-            duration: 0.4,
-            delay: 0.4,
-            type: "spring",
-            stiffness: 100,
-          }}
-        >
-          US
-        </motion.span>
-        <motion.span
-          key="him"
-          className="absolute left-0 top-[-10] w-full"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 100 }}
-          transition={{
-            duration: 0.4,
-            delay: 0.6,
-            type: "spring",
-            stiffness: 100,
-          }}
-        >
-          HIM
-        </motion.span>
-        <motion.span
-          key="her"
-          className="absolute left-0 top-[-5] w-full"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 100 }}
-          transition={{
-            duration: 0.5,
-            delay: 1,
-            type: "spring",
-            stiffness: 100,
-          }}
-        >
-          HER
-        </motion.span>
-      </span>
-    </p>
-  )}
-</AnimatePresence>
-{/* "to succeed." */}
+
 <p className="text-black text-3xl font-semibold absolute bottom-[10%] left-1/2 translate-x-[3.4rem]">
   <TypeEffect isVisible={isThreeVisible} transition={{ delay: 0 }}>
     to succeed.
@@ -246,8 +177,8 @@ export default function AboutSection() {
         
 
         {/* Scene 3: Babushka  */}
-        <div className="absolute top-[60%] right-[10%] max-w-sm text-right">
-          <p className="text-xl italic"><TypeEffect isVisible={isFourVisible} transition={{ delay: 0 }}>I am willing to help.</TypeEffect></p>
+        <div className="absolute top-[65%] right-[15%] max-w-sm text-right">
+          <p className="text-xl italic"><TypeEffect isVisible={isFourVisible} transition={{ delay: 0 }}>I am making a change.</TypeEffect></p>
         </div>
 
         {/* Scene 4: Portrait stroke → bottom-center */}

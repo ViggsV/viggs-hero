@@ -1,6 +1,22 @@
-import { motion } from "motion/react";
-
+import { motion, } from "motion/react";
+import React, { useState, useEffect } from "react";
+import RisingTextSequence from "./RisingTextSequence";
 export default function ProjectsSection() {
+  const [isTwoVisible, setIsTwoVisible] = useState(false);
+  useEffect(() => {
+      const showTwoTimeout = setTimeout(() => {
+        setIsTwoVisible(true); // Show after 1s
+      }, 100);
+  
+      // const hideTwoTimeout = setTimeout(() => {
+      //   setIsTwoVisible(false); // Hide after 4s total
+      // }, 11800);
+  
+      return () => {
+        clearTimeout(showTwoTimeout);
+        // clearTimeout(hideTwoTimeout);
+      };
+    }, []);
   return (
 
     <div>
@@ -21,6 +37,9 @@ export default function ProjectsSection() {
         <li className="mb-3"><span className="text-orange-300">Project Gamma</span> - UI/UX design for a mobile application</li>
       </ul>
     </div>
+
+    <RisingTextSequence isVisible={isTwoVisible}></RisingTextSequence>
       </div>
+      
   );
 }
