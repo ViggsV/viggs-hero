@@ -25,39 +25,37 @@ export default function HalfLifePortfolio() {
   };
 
   return (
-    <div className="relative h-full w-full overflow-hidden flex flex-col items-center min-h-screen bg-gradient-to-br from-gray-900 to-black p-8 font-mono z-1">
+    <div className="relative h-full w-full overflow-hidden flex flex-col items-center min-h-screen bg-gradient-to-br from-gray-900 to-black font-mono z-1">
       <div className="w-full ">
-
         <AnimatedNoise opacity={0.1} />
 
         {showMenu ? (
           <div className="flex flex-col items-left mt-6 ">
             <Title />
 
-
-
-            <MenuButton text="ABOUT" onClick={() => handleMenuClick("about")} />
-            <MenuButton
-              text="PROJECTS"
-              onClick={() => handleMenuClick("projects")}
-            />
-            <MenuButton
-              text="CONTACT"
-              onClick={() => handleMenuClick("contact")}
-            />
-            <MenuButton
-              text="RESUME"
-              onClick={() => window.open("/resume.pdf", "_blank")}
-            />
+            <div className="flex flex-col items-left mt-6 p-8">
+              <MenuButton
+                text="ABOUT"
+                onClick={() => handleMenuClick("about")}
+              />
+              <MenuButton
+                text="PROJECTS"
+                onClick={() => handleMenuClick("projects")}
+              />
+              <MenuButton
+                text="CONTACT"
+                onClick={() => handleMenuClick("contact")}
+              />
+              <MenuButton
+                text="RESUME"
+                onClick={() => window.open("/resume.pdf", "_blank")}
+              />
+            </div>
           </div>
         ) : (
           <div className="mt-6">
             <AnimatePresence mode="wait">
-              {currentSection === "about" && (
-                
-                  <AboutSection />
-                
-              )}
+              {currentSection === "about" && <AboutSection />}
               {currentSection === "projects" && (
                 <SectionMotion key="projects">
                   <ProjectsSection />

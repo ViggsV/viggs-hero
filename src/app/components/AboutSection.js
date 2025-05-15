@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import React, { useState, useEffect } from "react";
 import VideoBackground from "./VideoBackground";
-import { SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiAdobeaftereffects } from 'react-icons/si';
+import { SiJavascript, SiJes, SiReact, SiTailwindcss, SiAdobeaftereffects, SiAdobepremierepro, SiJest } from 'react-icons/si';
 import RisingTextSequence from "./RisingTextSequence"
 
 
@@ -17,7 +17,7 @@ export default function AboutSection() {
   useEffect(() => {
     const showTimeout = setTimeout(() => {
       setIsVisible(true); // Show after 1s
-    }, 8900);
+    }, 8200);
 
     const hideTimeout = setTimeout(() => {
       setIsVisible(false); // Hide after 4s total
@@ -31,7 +31,7 @@ export default function AboutSection() {
   useEffect(() => {
     const showTwoTimeout = setTimeout(() => {
       setIsTwoVisible(true); // Show after 1s
-    }, 9000);
+    }, 8400);
 
     // const hideTwoTimeout = setTimeout(() => {
     //   setIsTwoVisible(false); // Hide after 4s total
@@ -124,7 +124,7 @@ export default function AboutSection() {
           exit={{ opacity: 0 }}
         >
           <div className="absolute top-[10%] left-1/2 -translate-x-1/2 max-w-md text-center ">
-            <p className="text-white text-2xl">My name is Viggs.</p>
+            <p className="text-white text-2xl">I am known as Viggs.</p>
           </div>
         </motion.div>
 
@@ -178,7 +178,7 @@ export default function AboutSection() {
 
         {/* Scene 3: Babushka  */}
         <div className="absolute top-[65%] right-[15%] max-w-sm text-right">
-          <p className="text-xl italic"><TypeEffect isVisible={isFourVisible} transition={{ delay: 0 }}>I am making a change.</TypeEffect></p>
+          <p className="text-xl italic"><TypeEffect isVisible={isFourVisible} transition={{ delay: 0 }}>I'm making a change.</TypeEffect></p>
         </div>
 
         {/* Scene 4: Portrait stroke → bottom-center */}
@@ -190,19 +190,30 @@ export default function AboutSection() {
   </p>
   <ul className="list-none tracking-wide">
     {[
-      { name: 'JavaScript', icon: <motion.span className="text-yellow-400"  initial={{ opacity: 0, x: -10 }}
+            { name: 'Jest', icon: <motion.span  initial={{ opacity: 0, x: -10 }}
     animate={isFiveVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
-    transition={{ duration: 0.5, delay: 0.3 }}  ><SiJavascript size={22} /> </motion.span>},
+    transition={{ duration: 0.5, delay: 0.3 }}
+    className="text-rose-800"><SiJest size={22}/></motion.span>  },
+    
       { name: 'React', icon: <motion.span className="text-cyan-400" initial={{ opacity: 0, x: -10 }}
     animate={isFiveVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
     transition={{ duration: 0.5, delay: 0.3 }}> <SiReact  size={22} /></motion.span> },
       { name: 'Tailwind', icon: <motion.span  className="text-sky-400" initial={{ opacity: 0, x: -10 }}
     animate={isFiveVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
     transition={{ duration: 0.5, delay: 0.3 }}><SiTailwindcss size={22} /></motion.span> },
-      { name: 'Adobe After Effects', icon: <motion.span  initial={{ opacity: 0, x: -10 }}
+      { name: 'JavaScript', icon: <motion.span className="text-yellow-400"  initial={{ opacity: 0, x: -10 }}
+    animate={isFiveVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+    transition={{ duration: 0.5, delay: 0.3 }}  ><SiJavascript size={22} /> </motion.span>},
+  
+      { name: 'Adobe Premiere Pro', icon: <motion.span  initial={{ opacity: 0, x: -10 }}
     animate={isFiveVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
     transition={{ duration: 0.5, delay: 0.3 }}
-    className="text-red-600"><SiAdobeaftereffects size={22}/></motion.span>  },
+    className="text-indigo-800"><SiAdobepremierepro size={22}/></motion.span>  },
+        { name: 'Adobe After Effects', icon: <motion.span  initial={{ opacity: 0, x: -10 }}
+    animate={isFiveVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+    transition={{ duration: 0.5, delay: 0.3 }}
+    className="text-indigo-800"><SiAdobeaftereffects size={22}/></motion.span>  },
+
     ].map(({ name, icon }) => (
       <li key={name} className="flex items-center gap-3 text-gray-200 text-xl font-medium">
         <TypeEffect isVisible={isFiveVisible} transition={{ delay: 0 }}>
