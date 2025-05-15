@@ -188,7 +188,7 @@ export default function AboutSection() {
       Skills & Tools:
     </TypeEffect>
   </p>
-  <ul className="list-none">
+  <ul className="list-none tracking-wide">
     {[
       { name: 'JavaScript', icon: <motion.span className="text-yellow-400"  initial={{ opacity: 0, x: -10 }}
     animate={isFiveVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}

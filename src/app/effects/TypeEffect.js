@@ -6,7 +6,7 @@ export default function TypeEffect({ children, transition = {}, isVisible = true
 
   return (
     <span>
-      <AnimatePresence mode="wait">
+      <AnimatePresence >
         {isVisible &&
          text.split('').map((letter, index) => {
   const displayLetter = letter === ' ' ? '\u00A0' : letter;
